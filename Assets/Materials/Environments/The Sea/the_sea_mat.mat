@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: the_sea_mat
+  m_Shader: {fileID: 4800000, guid: 2c084fa950cc769448779b3b82cfcf0a, type: 3}
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: 0a9a68adc666ffa4fa701bb8e46979c9, type: 3}
+        m_Scale: {x: 5, y: 6}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.107867576, g: 0.2830189, b: 0.28147578, a: 1}
+    - _NoiseColor: {r: 1, g: 1, b: 1, a: 0.27450982}
+    - _NoiseDirection: {r: 0.02, g: 0.04, b: 0, a: 0}
+  m_BuildTextureStacks: []
