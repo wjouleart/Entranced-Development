@@ -82,11 +82,30 @@ public class DialogueManager : MonoBehaviour
     IEnumerator Typing(string current_sentence)
     {
         dialogue.text = "";
+        int letterCount = 0;
 
         foreach (char letter in current_sentence.ToCharArray())
         {
-            dialogue.text += letter;
-            yield return null;
+            letterCount++;
+            if (Input.GetMouseButton(0) || Input.touchCount == 1)
+            {
+                if (letterCount > 0)
+                {
+                    dialogue.text += current_sentence.Substring(letterCount - 1);
+                }
+                else
+                {
+                    dialogue.text += current_sentence.Substring(letterCount);
+                }
+                yield return null;
+                break;
+            }
+            else
+            {
+                dialogue.text += letter;
+                yield return null;
+            }
+
         }
 
         yield return new WaitForSeconds(0.5f);
