@@ -5,13 +5,14 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class EvilBehaviour : MonoBehaviour
 {
     GameObject player;
     NavMeshAgent player_agent;
     NavMeshAgent agent;
-    GameObject eye_indicator;
-    bool detected_player;
+    public static GameObject eye_indicator;
+    public static bool detected_player = false;
     bool isBeingRestrained;
 
     [HideInInspector]
@@ -47,7 +48,7 @@ public class EvilBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (detected_player && !isBeingRestrained)
+        if (VisionCone.detected_player && !isBeingRestrained)
         {
             agent.SetDestination(player.transform.position);
 
@@ -132,7 +133,7 @@ public class EvilBehaviour : MonoBehaviour
     }
 
 
-    void OnTriggerEnter(Collider other)
+    /*void OnTriggerEnter(Collider other)
     {
         if (!detected_player && other.gameObject.tag == "Player")
         {
@@ -149,5 +150,5 @@ public class EvilBehaviour : MonoBehaviour
             detected_player = false;
             eye_indicator.SetActive(false);
         }
-    }
+    }*/
 }
